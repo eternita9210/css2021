@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- fontSize -->
+<!-- px : 고정값
+    em : 브라우저 설정값에 따라 변화
+    rem : 브라우저 설정값에 따라 변화 -->
+
+<head>
+    <style>
+        /* 브라우저 setting의 web content의 font size 설정을 medium 에서 very samll이나 그 외로 바꾸면
+        rem의 경우 계속 변화하지만 px는 변화하지 않음 */
+        #px {font-size: 16px;}
+        #rem {font-size: 1rem;}
+        /* rem의 경우, 브라우저 setting 값이 무엇이냐에 비례하여 커짐
+        web Content font Size가 very Large인 경우 기본 값이 24px라면
+        1rem으로 해둔 폰트는 24px이, 10rem으로 해둔 폰트는 240px이 됨 */
+    </style>
+</head>
+
+<body>
+    <div id="px">PX</div>
+    <div id="rem">REM</div>
+</body>
+
+</html>
