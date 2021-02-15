@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        li {color: red;}
+        #idSel {color: blue;}
+        .classSel {color: green !important;}
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li id="idSel" class="classSel" style="color:powderblue">CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <hr>
+    <ol>
+        <h3>css 우선순위</h3>
+        <p>우선순위는 무엇이 더 구체적인지, 더 포괄적인지에 따라 정해짐. <br>
+            즉, tag 태그로 갈 수록 포괄적이고, style 속성이 가장 구체적 <br>
+            가장 포괄적인 태그로 공통된 css를 주고 특정 속성이 필요한 곳에 <br>
+            id나 class로 css를 주는 것이 경제적 <br>
+            이 때, 우선순위를 강제로 바꿀 수 있는 것은 속성 뒤에 !important
+        </p>
+        <li>style attribute</li>
+        <li>id Selector</li>
+        <li>class Selector</li>
+        <li>tag Selector</li>
+    </ol>
+</body>
+
+</html>

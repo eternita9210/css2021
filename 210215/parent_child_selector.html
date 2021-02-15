@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /* css 선택자 표기 시 띄어쓰기는 띄어쓰기 기준 왼쪽(부모)의 자식 태그라는 의미 */
+        ul li {
+            color: red;
+        }
+        /* 띄어쓰기 대신 꺽쇠 (>) 를 사용하면, 직계 자손 태그만 선택됨 
+        예를 들어, <li>selector</li>와 <li>declaration</li>는 #lecture의 직계 자손은 아니고
+        자식의 자식이므로 border 적용 안됨
+        단 property 중 color는 꺽쇠를 사용해도 전체 자손에 적용*/
+        #lecture>li {
+            border: 1px solid red;
+        }
+        /* 선택자 사이에 콤마(,)가 있다면 그것은 and의 의미로 {} 안의 내용이 두 선택자에 모두 적용 */
+        ul, ol {
+            background-color: powderblue;
+        }
+        /* 그 외 (https://flukeout.github.io/ 참고) */
+        /* 1) * :전체 태그 선택
+           2) ul * :ul아래의 전체 내용 선택
+           3) ul li:only-child :ul 태그 중 li 태그 하나만 갖고 있는 것 선택
+           4) p + .intro :p 태그 바로 아래(not child)에 위치하는 클래스 명이 intro인 태그 선택
+           5) div ~ a :div 아래의 모든 a 태그 선택 */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol id="lecture">
+        <li>HTML</li>
+        <li>CSS
+            <ol>
+                <li>selector</li>
+                <li>declaration</li>
+            </ol>
+        </li>
+        <li>JavaScript</li>
+    </ol>
+</body>
+
+</html>

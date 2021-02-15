@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /* 가상 선택자 pseudo class selector */
+        /* 클래스처럼 동작해서 각 element 상태에 따라 선택자가 선택되기도 하고 아니기도 함 */
+        /* 동급인 css를 적용하는 경우 밑에 위치한 css를 적용 */
+
+        /* 방문했던 링크인 경우 */
+        a:visited {
+            color: red;
+        }
+
+        /* 방문하지 않은 경우 */
+        a:link {
+            color: black;
+        }
+
+        /* 해당 태그에 마우스를 올리면 css 적용 */
+        a:hover {
+            color: yellow;
+        }
+
+        /* 클릭하면 css 적용 ex.a태그를 클릭한 상태로 마우스를 떼지 않으면 */
+        a:active {
+            color: green;
+        }
+
+        /* 포커싱 */
+        a:focus {
+            color: white;
+        }
+
+        input:focus {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://naver.com">방문함</a>
+    <a href="https://a.a">방문안함</a>
+    <input type="text" />
+</body>
+
+</html>

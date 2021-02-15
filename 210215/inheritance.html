@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        /* li {color:red;}
+        h1 {color: red;} */
+
+        /* html 태그는 페이지의 가장 최상단 부모 태그 */
+        /* 부모 태그에 적용한 css는 자식 태그에도 전부 적용 (상속) */
+        /* 그러나 property에 따라 상속되는 것과 안되는 것으로 나뉨 */
+        /* color는 상속되고, border는 안됨 > 공식 문서 살피기*/
+        html {
+            color: red;
+        }
+        #select {
+            color: black;
+        }
+        body {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>수업 내용</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="select">JavaScript</li>
+    </ul>
+</body>
+</html>
