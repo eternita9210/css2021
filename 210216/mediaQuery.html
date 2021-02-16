@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- media query는 반응형이나 모바일 화면에서 적용되지 않을 수 있으므로
+    아래 meta 값을 줘야 적용됨 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* cascading과 관련 있기 때문에 순서가 중요함
+        아래 media query 중 첫번째와 두번째는 body라는 태그 하나에 max-width라는 동일한 조건의
+        css들 이므로 가장 밑에 있는 css가 우선순위 높음 */
+
+        @media (max-width:600px) {
+
+            /* 화면이 500px이하인 경우 아래 style 적용 */
+            body {
+                background-color: green;
+            }
+        }
+
+        @media (max-width:500px) {
+
+            /* 화면이 500px이하인 경우 아래 style 적용 */
+            body {
+                background-color: red;
+            }
+        }
+
+        @media (min-width:600px) {
+
+            /* 화면이 500px이하인 경우 아래 style 적용 */
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    ~500px : red
+    501 ~ 600px : green
+    601px~ : blue
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- position -->
+<!-- static: position 기본값, offset(right,left,top,bottom) 적용 안됨
+    relative: '상대적인' offset 지정 적용 가능, 부모 element 기준
+    absolute: 최상단 태그 html 기준으로 위치 지정 가능, 만약 offset 지정 없이 그냥 position 값만
+    줄 경우, 부모 element 기준 아래에 위치
+        why? offset 내용이 설정되어 있지 않다면, 부모 element 기준으로 자신이 원래 위치해야 할
+        곳이 기본값이 되기 때문
+    또한 absolute로 설정된 태그는 부모 tag와의 연결이 끊기므로 부모에게는 자식tag가 없는 것처럼 여겨짐
+    but!! 자기 자신을 기준으로 자신은 absolute, 부모들 중 position 값이 relative인 경우, 그 부모가
+    기준이 된다
+    fixed: 스크롤 이동과는 상관 없이 항상 고정되어 있는 위치
+ -->
+<html>
+
+<head>
+    <style>
+        /* div {
+            border: 5px solid tomato;
+            margin: 10px;
+        } */
+
+        #grand,
+        #parent,
+        #other,
+        #another,
+        #parent2 {
+            border: 5px solid tomato;
+        }
+
+        #grand {
+            position: relative;
+        }
+
+        #me {
+            position: absolute;
+            /* left와 right 둘 다 있으면 left, top과 bottom이 둘 다 있으면 top 우선
+            left: 100px;
+            right: 100px;
+            top: 100px;
+            bottom: 100px; */
+            background-color: black;
+            color: white;
+            left: 0;
+            top: 0;
+        }
+
+        #child {
+            background-color: black;
+            color: white;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+
+        #large {
+            height: 1000px;
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="other">other</div>
+    <div id="grand">
+        grand
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </div>
+    <hr>
+    <div id="another">another</div>
+    <div id="parent2">
+        parent
+        <div id="child">child</div>
+    </div>
+    <div id="large">large</div>
+</body>
+
+</html>

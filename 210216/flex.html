@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- flex -->
+<!-- 여러 item 태그들을 한 줄로 표현하기 위해서 그것들을 감싼 부모 태그에 적용하는 css로,
+    기본적으로 display: flex면 flex-direction은 row 즉, 가로 정렬
+    container 태그에 넣을 것과 item 태그에 넣을 것이 구분됨 -->
+<html>
+
+<head>
+    <style>
+        .container {
+            background-color: slategrey;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+            /* container의 여백을 나눠갖게 하는 속성 
+            flex-grow: 1;*/
+        }
+        .item:nth-child(1) {
+            flex-basis: 300px; 
+            flex-shrink: 1;
+        }
+        .item:nth-child(2) {
+            /* class 명이 item인 것들 중 두번째 */
+            /* 크기 지정 */
+            flex-basis: 300px; 
+            /* flex-grow: 2;*/
+            /* flex-grow와 반대되는 속성으로 0으로 설정 시, 화면 크기에 따라 공간 분담을 하게 됨
+            flex-basis 값 기준으로 shrink의 숫자만큼 더 많은 공간 분담을 하게 됨 */
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>

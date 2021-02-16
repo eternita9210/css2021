@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- box model 관련 css -->
+<!-- box model이란, tag의 부피감 (여백, 크기 등)에 대해 정의하는 것 -->
+<!-- padding : box model 내부 콘텐츠의 여백
+    margin: box model 외부의 다른 콘텐츠와의 거리 
+    width: box model의 너비
+    height: box model의 높이
+     ** width와 height는 inline tag의 경우 적용되지 않음-->
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+    p {
+        border: 10px solid red;
+        padding: 20px;
+        margin: 40px;
+        width: 300px;
+    }
+    div {
+        margin:10px;
+        width: 150px;
+        /* box-sizing */
+        /* width와 height는 box 전체가 아닌 그 안의 content box의 크기에만 적용됨
+        small과 large div를 보면 똑같이 width 150px을 줘도 전체 크기는 다르게 보임
+        이 방식을 바꿀 수 있는 것이 box-sizing으로, 기본값인 content-box를 border-box로
+        바꾸면 box 중 가장 바깥인 border의 크기에 맞춰서 width, heinght가 결정됨 */
+        box-sizing: border-box;
+    }
+    #small {
+        border: 10px solid black;
+    }
+    #large {
+        border: 30px solid black;
+    }
+</style>
+
+<body>
+
+</body>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium a minus ad? Ex laboriosam fugiat magnam fuga,
+    enim commodi. Esse assumenda porro natus neque earum consectetur quod ea, consequuntur facere?
+</p>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium a minus ad? Ex laboriosam fugiat magnam fuga,
+    enim commodi. Esse assumenda porro natus neque earum consectetur quod ea, consequuntur facere?
+</p>
+<hr>
+<div id="small">Hello</div>
+<div id="large">Hello</div>
+
+</html>

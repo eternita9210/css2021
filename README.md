@@ -11,4 +11,23 @@
 - inheritance.html
 - cascading_1.html
 ## 3. 서체
-- font-size
+- font-size.html
+: px, em, rem
+- color_text_align.html
+: color name, rgb, hexadecimal / text-align
+- font.html
+: font-size, font-family...
+- web font
+## 4. 레이아웃
+- inline_block.html
+- box model.html
+: padding, margin, width, height / box-sizing
+- margin_collapsing.html
+: 마진 겹침의 종류
+- position.html
+: static, relative, absolute, fixed
+- flex.html
+- holyGrailLayout.html
+- mediaQuery.html
+- mediaQuery_holyGrailLayout.html
+: media query 실습
