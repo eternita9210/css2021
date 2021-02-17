@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- transform
+element에 변형을 주는 속성으로 element가 block 혹은 inline-block 일 때만 적용됨
+scale 크기 키우기
+rotate 회전
+skew 기울이기
+translate 이동
+matrix traslate, skew, rotate, scale을 한 꺼번에 행렬로 표시-->
+<head>
+    <style>
+        h1 {
+            background-color: coral;
+            color: white;
+            display: inline-block;
+            padding: 5px;
+            font-size: 3rem;
+            margin: 100px;
+            /* scaleX() : 가로(X축) 변형
+               scaleY() : 세로축(Y축) 변형
+               scale(x, y) : x, y 동시에 변형 */
+            transform: 
+                /* scaleX(2) scaleY(0.5) */
+                scale(0.5, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello Transform!</h1>
+</body>
+
+</html>

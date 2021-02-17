@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- filter -->
+<!-- 이미지나 텍스트 등에 여러 변화를 줄 수 있는 속성
+단, 브라우저별로 지원하지 않는 것이 있을 수 있음 -->
+<!-- https://codepen.io/ 로 들어가서 filter 검색 시 이 속성으로 만든 다양한 화면 예시 있음  -->
+<head>
+    <style>
+        img {
+            /* 변경 사항이 몇 초 동안 이루어질 것인지 */
+            transition: all 1s;
+        }
+        img:hover { 
+            /* hover : 마우스를 영역에 올렸을 때 */
+            -webkit-filter: grayscale(100%) blur(3px);
+            filter: grayscale(100%) blur(3px);
+        }
+        h1 {
+            -webkit-filter: blur(1px);
+            filter: blur(1px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>baby dog</h1>
+    <img src="babyDog.png" alt="">
+</body>
+
+</html>

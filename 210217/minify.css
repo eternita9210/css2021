@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+h1 { 
+    color:tomato;
+    font-size: 3rem;
+    text-align: center;
+}
+p {
+    color: white;
+    column-width: 200px;
+    column-gap: 10px;
+    column-rule-style: groove;
+    column-rule-color: wheat;
+}
