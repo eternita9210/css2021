@@ -1,35 +1,198 @@
+html {
+    color: #424242;
+}
 
-/* #head */
-#slider {
-    background: url('../img/event_kakao.jpg');
+html, body {
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, input, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    html, body {
+        font-size: 15px;
+    }
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    box-sizing: border-box;
     position: relative;
-    overflow: hidden;
-    height: 40px;
+    display: block;
 }
 
-#topBannerImg {
+a {
+    text-decoration: none;
+    color: #424242;
+    font-weight: 700;
+}
+
+.topHeader {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+    z-index: 100;
+}
+
+.fixedHeader, .mainHeader {
+    display: flex;
+    margin: 0 auto;
+}
+
+.fixedHeader .left, .fixedHeader .header-menu, .fixedHeader .right {
+    align-self: center;
+}
+
+.fixedHeader .left {
+    margin-right: 35px;
+    flex: 0 0 auto;
+}
+
+.fixedHeader .left img {
+    padding-top: 5px;
+}
+
+.fixedHeader .header-menu { 
+    flex: 0 0 auto;
+}
+
+.fixedHeader .right {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.fixedHeader .header-menu a {
+    position: relative;
+    display: inline-block;
+    margin: 6px 10px 0;
+    padding: 14px 6px;
+    font-size: 18px;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.fixedHeader .header-menu a:hover {
+    color: #35c5f0;
+}
+
+.fixedHeader .header-menu .menu-comunity {
+    color: #35c5f0;
+}
+
+.right-search {
+    position: relative;
+}
+
+.right-search svg {
     position: absolute;
+    top: 24px;
+    left: 10px;
+}
+
+.right-search input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 10px 6px 10px 35px;
+    margin-top: 15px;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+
+.fixedHeader .right a {
+    color: #757575;
+    transition: color .1s;
+    border: none;
+    border-radius: 100%;
+}
+.fixedHeader .right .cart {
+    padding: 7px 7px 2px 7px;
+    margin: 18px 10px;
+}
+
+.fixedHeader .right .cart:hover, .fixedHeader .right a svg:hover {
+    background-color: #35c5f0;
+    color: #fff;
+}
+
+.fixedHeader .right .signIn-up {
+    position: relative;
+    display: inline-block;
+    margin: 0 9px 0 8px;
+    padding: 2px;
+    color: #757575;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 25px 0;
+}
+
+.fixedHeader .right .signIn:hover, .fixedHeader .right .signUp:hover {
+    color: #35c5f0;
+}
+
+.signIn::after {
+    content: "";
+    top: 6px;
+    left: 100%;
+    bottom: 3px;
+    margin-left: 8px;
+    border-right: 1px solid #757575;
+}
+
+.writeBtn {
+    display: inline-block;
+    margin: 17px 10px;
+    border: none;
+    background: none;
+    font: inherit;
+    width: 85px;
+    box-sizing: border-box;
+    padding: 8px 0 10px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 700;
     text-align: center;
-    top: 0px;
-    left: 0px;
+    color: #fff;
+    background-color: #35c5f0;
+    border-radius: 4px;
+    transition: background-color .1s;
 }
 
-/* #topFixedMenu */
-#topFixedMenu {
-    width: 100%; 
-    background: rgb(255, 255, 255); 
-    position: relative; 
-    z-index: 20; 
-    height: 0px; 
-    top: 0px;
+.writeBtn:hover {
+    background-color: #28aad1;
 }
 
-#menuBorder {
-    width:100%; 
-    height:1px;
-    position:absolute; 
-    background-color:#333; 
-    position:absolute;
-    margin-top:114px;
-    z-index:21;
+.mainHeader .menuList .home {
+    color: #35c5f0;
+    border-bottom: 3px solid #35c5f0;
+}
+
+.mainHeader a:hover {
+    color: #35c5f0;
+}
+
+/* media */
+@media (min-width:770px) {
+    .fixedHeader, .mainHeader {
+        height: 80px;
+        padding: 10px 40px;
+        max-width: 1256px;
+    }
+}
+
+@media (min-width:1024px) {
+    .fixedHeader, .mainHeader {
+        padding: 10px 60px;
+    }
 }
