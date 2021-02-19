@@ -22,6 +22,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, inpu
     flex-direction: column;
 }
 
+/* -- header -- */
 header {
     box-sizing: border-box;
     position: relative;
@@ -34,16 +35,18 @@ a {
     font-weight: 700;
 }
 
-.topHeader {
+.upper {
     position: relative;
     background-color: #fff;
     border-bottom: 1px solid #ededed;
     z-index: 100;
 }
 
+/* fixedHeader */
 .fixedHeader, .mainHeader {
     display: flex;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .fixedHeader .left, .fixedHeader .header-menu, .fixedHeader .right {
@@ -173,26 +176,149 @@ a {
     background-color: #28aad1;
 }
 
-.mainHeader .menuList .home {
-    color: #35c5f0;
-    border-bottom: 3px solid #35c5f0;
+/* mainHeader */
+.downer {
+    position: relative;
+    transition: top .1s;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+    z-index: 99;
+}
+
+.mainHeader {
+    align-items: center;
 }
 
 .mainHeader a:hover {
     color: #35c5f0;
 }
 
+.mainHeader .menuList {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+.mainHeader .menuList .menuList-item {
+    margin: 0 5px;
+}
+
+.mainHeader .menuList .menuList-item:active::after {
+    content: "";
+    position: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    border-bottom: 3px solid #35c5f0;
+}
+
+/* -- container -- */
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.main-banner {
+    padding-top: 30px;
+}
+
+/* -- footer -- */
+footer {
+    display: block;
+    background-color: #fafafa;
+}
+
+.footer-wrapper {
+    display: block;
+    max-width: 1256px;
+    margin: 0 auto;
+    padding: 30px 60px 40px;
+    box-sizing: border-box;
+}
+
+.footer-wrapper .footer-top {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.footer-wrapper .footer-top .footer-top-cs {
+    font-style: normal;
+    margin: 0 0 25px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.footer-wrapper .footer-top .footer-top-cs .cs-number {
+    font-size: 35px;
+}
+
+.footer-wrapper .footer-top .footer-top-cs .cs-time {
+    font-weight: 300;
+}
+
+.footer-wrapper .footer-shortcut {
+    margin: 0 -5px 10px;
+}
+
+.footer-wrapper .footer-shortcut li {
+    display: inline-block;
+    margin: 0 3px;
+    padding: 2px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #424242;
+}
+
+.footer-wrapper .footer-companyInfo, .footer-wrapper .footer-companyInfo a {
+    font-style: normal;
+    color: #757575;
+    font-size: 9px;
+}
+
+.footer-wrapper .footer-companyInfo .info-detail, .footer-wrapper .footer-companyInfo .info-safe {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.footer-wrapper .footer-companyInfo dt, .footer-wrapper .footer-companyInfo dd {
+    display: inline;
+}
+
+.footer-wrapper .footer-companyInfo dt::after {
+    content: " : ";
+}
+
+.footer-wrapper .copy {
+    margin: 10px 0 0;
+    font-size: 10px;
+    color: #424242;
+    line-height: 16px;
+}
+
 /* media */
 @media (min-width:770px) {
-    .fixedHeader, .mainHeader {
+    .fixedHeader {
         height: 80px;
-        padding: 10px 40px;
+        padding: 0 40px;
+        max-width: 1256px;
+    }
+
+    .mainHeader {
+        height: 50px;
+        padding: 0 40px;
         max-width: 1256px;
     }
 }
 
 @media (min-width:1024px) {
     .fixedHeader, .mainHeader {
-        padding: 10px 60px;
+        padding: 0 60px;
+    }
+}
+
+@media (max-width:769px) {
+    .fixedHeader {
+        height: 50px;
     }
 }
